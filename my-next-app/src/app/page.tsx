@@ -24,7 +24,7 @@ export default function WordCard() {
         <CardTitle className="text-lg mt-2">Apple</CardTitle>
       </CardHeader>
       <CardContent className="text-sm text-gray-600 space-y-1">
-        <p>苹果，一种常见水果。</p>
+        <p>苹果，11111一s种常见水果。</p>
         <p>
           <strong>例句：</strong> She ate an apple for breakfast.
         </p>
