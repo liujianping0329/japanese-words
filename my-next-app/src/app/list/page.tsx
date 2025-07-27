@@ -25,9 +25,12 @@ export default function WordCalendarPage() {
         if (!res.ok) throw new Error(`API error: ${res.status}`);
         const data = await res.json();
         setWordList(Array.isArray(data) ? data : [data]); // 防止单个对象返回时出错
-      } catch (err: any) {
-        setError(err.message || "Unknown error");
-        setWordList([]);
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError("Unknown error");
+        }
       } finally {
         setLoading(false);
       }
